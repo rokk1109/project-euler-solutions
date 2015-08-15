@@ -1,0 +1,22 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+	<script>
+		var tempvar;
+		var first = 0;
+		var second = 1;
+		var total = 0;
+		while(first<4000000){
+			if (first%2==0){
+				total+=first;
+			}
+			tempvar = first + second;
+			first = second;
+			second = tempvar;
+		}
+		console.log(total)
+	</script>
+</body>
+</html>

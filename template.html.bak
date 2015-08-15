@@ -1,0 +1,20 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+<script>
+	var testnumber =  600851475143;
+	var square = Math.sqrt(testnumber);
+	var max = Math.floor(square);
+	for (i=max ; i>=0 ; i--){
+		if (testnumber%i == 0){
+			console.log(i);
+			break;
+		}
+	}
+	
+	</script>
+</script>
+</body>
+</html>
