@@ -4,6 +4,7 @@
 </head>
 <body>
 <script>
+	// here we check if a number is prime if it is return the number
 	function isPrime(value) {
     for(var i = 2; i < value; i++) {
         if(value % i === 0) {
@@ -12,19 +13,26 @@
     }
     return value > 1;
 }
-
+	/*setting up variables. The reason why we are taking the square root
+	of the 600851475143, is because anything larger than the square root
+	 would have already been tested we basically elimiate half the prime
+	 numbers to test*/
+	 
 	var testNumber =  600851475143;
 	var square = Math.sqrt(testNumber);
 	var max = Math.floor(square);
+	
+	/*This loop starts at the square root of our number, then it checks
+	if that number is prime, if it is prime, then it checks weather that prime
+	number is a divisor. If these conditions are true, the loop breaks, if not
+	the number being tested for prime is decremented by one*/
 	for(var i = max; i >=0; i--){
 		primeNumber = isPrime(i);
 		if(primeNumber){
-			console.log(testNumber%primeNumber);
-			break;
-			/*if(testNumber%primeNumber==0){
+			if(testNumber%i==0){
 				console.log("The largest prime factor is: "+i);
 				break;
-			}*/
+			}
 		}
 
 	}
